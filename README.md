@@ -1,6 +1,6 @@
 # Instruções para Configuração do Banco de Dados
 
-Este projeto inclui scripts SQL para criar e alimentar tabelas em um banco de dados, bem como um diagrama para visualização da estrutura das tabelas.
+Este projeto inclui scripts SQL para criar e alimentar tabelas em um banco de dados MySQL, bem como um diagrama para visualização da estrutura das tabelas.
 
 ## Estrutura do Projeto
 
