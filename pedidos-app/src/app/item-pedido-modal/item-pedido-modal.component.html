@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Itens do Pedido</h1>
+<div mat-dialog-content>
+  <table mat-table [dataSource]="itensPedido">
+    <ng-container matColumnDef="Produto">
+      <th mat-header-cell *matHeaderCellDef> Produto </th>
+      <td mat-cell *matCellDef="let item"> {{item.produto.nome}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Quantidade">
+      <th mat-header-cell *matHeaderCellDef> Quantidade </th>
+      <td mat-cell *matCellDef="let item"> {{item.quantidade}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Valor Total">
+      <th mat-header-cell *matHeaderCellDef> Valor Total </th>
+      <td mat-cell *matCellDef="let item"> {{item.valorTotalProduto}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="['Produto', 'Quantidade', 'Valor Total']"></tr>
+    <tr mat-row *matRowDef="let row; columns: ['Produto', 'Quantidade', 'Valor Total']"></tr>
+  </table>
+</div>
+<div mat-dialog-actions align="end">
+  <button mat-button mat-raised-button color="primary" (click)="onNoClick()">Ok</button>
+</div>
